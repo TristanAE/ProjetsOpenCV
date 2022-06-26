@@ -36,6 +36,17 @@ On cherche tout d’abord à ce que le programme sache détecter une main : on u
 
 On télécharge ensuite 7 notes de musique DO RE MI FA SOL LA SI que l’on fera jouer grâce à la bibliothèque *SimpleAudio*, et on dessine en haut de l’écran 7 rectangles collés les uns aux autres représentant les touches.
 
+Pour chaque touche voici le procédé utilisé : 
+
+•	On regarde si l’un des index des deux mains est au niveau des coordonnées de la touche DO
+
+•	Si c’est la main n°1, alors on indique qu’elle ne se trouve plus sur les autres touches. Idem si c’est la main n°2.
+
+•	Si la main n°1 et la main n°2 n’étaient pas sur DO avant, alors on joue le son. On indique ensuite que la main n°1 ou la main n°2 est sur cette touche. On évite ainsi que le son se joue en permanence quand on maintient appuyé ou si les deux mains viennent sur la même touche.
+
+•	Juste avant avoir joué le son, on coupe la note de piano qui était en train de joué avant si nécessaire : Si la main n°1 avait appuyé sur une touche puis avait changé de touche.Pour cela, on note la touche sur laquelle est passée est la main n°1 et on éteindra cette note au prochain passage sur autre touche.
+
+•	Si la main n°2 appuie sur une autre touche que la main n°1, ayant des variables différentes que celle-ci, elle n’aura pas sa note coupée. Il y aura superposition des notes.
 
 
 
