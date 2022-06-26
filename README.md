@@ -89,6 +89,9 @@ Si le majeur est baissé et l’index levé :
 
 Remarque : L’image de la caméra s’actualise en permanence et la couleur dessinée par notre main s’effacerait à chaque fois. Le tableau blanc est une image chargée qui conserve le dessin et qui peut le calquer sur l’image de la caméra à chaque fois.
 
+![Picture1](https://user-images.githubusercontent.com/92324336/175810349-7c424c4a-4a51-460c-ac88-2507f6c8427d.png)
+![Picture2](https://user-images.githubusercontent.com/92324336/175810351-03e61aa8-e653-4bba-ac8d-a8f9e00da785.png)
+
  
 
 # III-	Piano Tiles automatique
