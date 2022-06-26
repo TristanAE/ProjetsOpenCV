@@ -7,6 +7,7 @@ Piano virtuel simple / Dessin virtuel simple / Piano Tiles automatique
 Piano simplifié de sept touches DO RE MI FA SOL LA SI 
 
 *Fonctionnalités* :
+
 •	Possibilité de jouer avec les deux mains
 
 •	Arrêt des notes si la main n’est plus sur le clavier
@@ -16,6 +17,7 @@ Piano simplifié de sept touches DO RE MI FA SOL LA SI
 •	Pour une deuxième main, la note jouée par la 1ère se superpose à la note jouée par la 2ème 
 
 *Problèmes *:
+
 •	Latence de la caméra
 
 •	Saturation du son
@@ -43,6 +45,7 @@ On télécharge ensuite 7 notes de musique DO RE MI FA SOL LA SI que l’on fera
 Zone de dessin 
 
 *Fonctionnalités* :
+
 •	Choix de trois couleurs de crayon
 
 •	Choix de trois épaisseurs du crayon
@@ -50,6 +53,7 @@ Zone de dessin
 •	Dessin sur tableau blanc ou sur caméra
 
 *Problème* :
+
 •	Latence de la caméra
 
 Même procédé pour détecter les mains à l’écran que pour AirPiano. 
@@ -83,8 +87,9 @@ Jeu Piano Tiles joué automatiquement pour battre son record.
 Pour capturer l’écran de son ordinateur, on utilise la bibliothèque *PIL* et *numpy* : pip install pillow numpy
 
 •	On capture l’image que l’on met dans un tableau
-*img = ImageGrab.grab()
-img_np = np.array(img)*
+*img = ImageGrab.grab()*
+
+*img_np = np.array(img)*
 
 •	On modifie le type de l’image en HSV pour pouvoir lui appliquer un filtre de couleur avec la fonction *inRange((0,0,0,0)(180,155,30,0))*. On cherche à isoler le noir qui correspond aux tuiles du jeu.
 
