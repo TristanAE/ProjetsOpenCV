@@ -97,4 +97,5 @@ Pour capturer l’écran de son ordinateur, on utilise la bibliothèque *PIL* et
 
 •	Dès qu’un contour de tuiles est détecté, la souris se déplace au niveau de ses cordonnées (que l’on adapte à notre écran) puis clique avec *Pynput*.
 
- 
+ ![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/92324336/175808652-d8dba42f-1a4d-4e04-b1b6-a62775e833d1.gif)
+
