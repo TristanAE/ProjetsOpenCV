@@ -6,8 +6,7 @@ Piano virtuel simple / Dessin virtuel simple / Piano Tiles automatique
 
 Piano simplifié de sept touches DO RE MI FA SOL LA SI 
 
-*Fonctionnalités :
-
+*Fonctionnalités* :
 •	Possibilité de jouer avec les deux mains
 
 •	Arrêt des notes si la main n’est plus sur le clavier
@@ -16,23 +15,22 @@ Piano simplifié de sept touches DO RE MI FA SOL LA SI
 
 •	Pour une deuxième main, la note jouée par la 1ère se superpose à la note jouée par la 2ème 
 
-*Problèmes :
-
+*Problèmes *:
 •	Latence de la caméra
 
 •	Saturation du son
 
-On cherche tout d’abord à ce que le programme sache détecter une main : on utilise la bibliothèque *mediapipe.
+On cherche tout d’abord à ce que le programme sache détecter une main : on utilise la bibliothèque *mediapipe*.
 
 •	On convertit l’image en RGB
 
-•	On utilise la fonction process() qui récupère les informations sur les mains. Si cette fonction renvoie une information non nulle, alors il y a une ou plusieurs mains à l’écran
+•	On utilise la fonction *process()* qui récupère les informations sur les mains. Si cette fonction renvoie une information non nulle, alors il y a une ou plusieurs mains à l’écran
 
 •	Pour chaque main détectée, on affiche les coordonnées des 21 marqueurs qui la compose
 
 •	On récupère une liste contenant chaque coordonnée : si deux mains sont à l’écran, la liste contiendra 41 éléments que l’on divisera en deux listes pour contrôler chaque main
 
-•	On utilise la fonction draw_landmarks() pour la dessiner à l’écran avec ses connections
+•	On utilise la fonction *draw_landmarks()* pour la dessiner à l’écran avec ses connections
 
 On télécharge ensuite 7 notes de musique DO RE MI FA SOL LA SI que l’on fera jouer grâce à la bibliothèque *SimpleAudio*, et on dessine en haut de l’écran 7 rectangles collés les uns aux autres représentant les touches.
 
@@ -44,16 +42,14 @@ On télécharge ensuite 7 notes de musique DO RE MI FA SOL LA SI que l’on fera
 
 Zone de dessin 
 
-*Fonctionnalités :
-
+*Fonctionnalités* :
 •	Choix de trois couleurs de crayon
 
 •	Choix de trois épaisseurs du crayon
 
 •	Dessin sur tableau blanc ou sur caméra
 
-*Problème :
-
+*Problème* :
 •	Latence de la caméra
 
 Même procédé pour détecter les mains à l’écran que pour AirPiano. 
@@ -64,7 +60,7 @@ Pour dessiner à l’écran :
 
 •	Pour chacune d’entre elles, on rajoute un bandeau à son sommet où sont dessinées les différentes couleurs et tailles de pinceau
 
-Si le majeur et l’index sont levés ( utilisation de math.dist pour voir la distance entre eux) :
+Si le majeur et l’index sont levés ( utilisation de *math.dist* pour voir la distance entre eux) :
 
 •	On ne dessine alors pas à l’écran mais l’on regarde les cordonnées de l’index
 
@@ -94,6 +90,6 @@ img_np = np.array(img)*
 
 •	On récupère les contours du masque qui correspondent uniquement aux tuiles, on vérifie que le résultat est non nul puis on récupère les coordonnées du contour principal détecté 
 
-•	Dès qu’un contour de tuiles est détecté, la souris se déplace au niveau de ses cordonnées (que l’on adapte à notre écran) puis clique avec *Pynput.
+•	Dès qu’un contour de tuiles est détecté, la souris se déplace au niveau de ses cordonnées (que l’on adapte à notre écran) puis clique avec *Pynput*.
 
  
